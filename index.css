@@ -1,0 +1,141 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* Animated Background */
+body {
+  font-family:'Segoe UI', sans-serif;
+  color:white;
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #7c3aed, #ec4899);
+  background-size:400% 400%;
+  animation:gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Navbar */
+header {
+  position:sticky;
+  top:0;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(10px);
+}
+
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+}
+
+nav ul {
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  position:relative;
+}
+
+nav a::after {
+  content:"";
+  width:0;
+  height:2px;
+  background:cyan;
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  transition:0.3s;
+}
+
+nav a:hover::after {
+  width:100%;
+}
+
+/* Hero */
+#hero {
+  display:flex;
+  justify-content:space-between;
+  padding:80px 50px;
+  align-items:center;
+}
+
+.hero-text span {
+  color:cyan;
+}
+
+.btn {
+  padding:10px 20px;
+  border:none;
+  border-radius:20px;
+  background:linear-gradient(45deg, cyan, magenta);
+  color:white;
+}
+
+/* Image */
+.img-box {
+  padding:10px;
+  border-radius:20px;
+  background:linear-gradient(45deg, cyan, magenta);
+  transition:0.5s;
+}
+
+.img-box img {
+  width:250px;
+  border-radius:15px;
+}
+
+/* Sections */
+section {
+  padding:50px;
+}
+
+/* Cards */
+.cards {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card {
+  background:rgba(255,255,255,0.1);
+  padding:20px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover {
+  transform:translateY(-10px) scale(1.05);
+}
+
+.big {
+  width:100%;
+}
+
+/* Fade */
+.fade {
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.fade.show {
+  opacity:1;
+  transform:translateY(0);
+}
+#contact a {
+  color: cyan;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
